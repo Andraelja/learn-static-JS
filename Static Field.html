@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+
+        class Student {
+            static totalStudent = 0;
+
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+                Student.totalStudent++;
+            }
+            static getTotalStudent(){
+                return Student.totalStudent;
+            }
+
+        }
+        const student1 = new Student("andra", 19);
+        const student2 = new Student("andra", 10);
+
+        console.log(Student.getTotalStudent())
+
+        
+
+        
+
+    </script>
+</body>
+</html>
